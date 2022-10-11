@@ -23,8 +23,6 @@ class CreateMoyenneTrimestriellesTable extends Migration
                 ->on("niveaux")
                 ->onDelete("cascade");
                 
-           
-                
                 $table->BigInteger("trimestre_id")->unsigned();
                 $table->foreign("trimestre_id")
                 ->references("id")
