@@ -28,7 +28,7 @@ class CreateMoyenneTrimestriellesTable extends Migration
                 ->references("id")
                 ->on("semestres")
                 ->onDelete("cascade");
-                
+            
                 $table->BigInteger("classe_id")->unsigned();
                 $table->foreign("classe_id")
                 ->references("id")
