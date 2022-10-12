@@ -25,9 +25,9 @@ class CreateUsersTable extends Migration
             $table->string("adresse")->nullable();
             $table->string("image")->nullable();
             $table->BigInteger('role_id')->unsigned();
-            $table->timestamps('last_seen')->nullable();
+            // $table->timestamps('last_seen')->nullable();
             $table->Integer('is_online')->nullable();
-            $table->timestamp('email_verified_at')->nullable();
+            // $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
