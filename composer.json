@@ -18,6 +18,7 @@
         "maatwebsite/excel": "^3.1",
         "nexmo/client": "^2.4",
         "realrashid/sweet-alert": "^4.1",
+        "symfony/polyfill-mbstring": "^1.26",
         "tymon/jwt-auth": "^1.0",
         "vonage/client": "^2.4",
         "yajra/laravel-datatables-oracle": "^9.18"
