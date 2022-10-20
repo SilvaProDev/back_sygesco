@@ -15,7 +15,6 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
-       
         "nexmo/client": "^2.4",
         "realrashid/sweet-alert": "^4.1",
         "tymon/jwt-auth": "^1.0",
