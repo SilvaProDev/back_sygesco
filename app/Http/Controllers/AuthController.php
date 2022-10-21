@@ -62,7 +62,7 @@ class AuthController extends Controller
             $user->image = $image;
             $user->adresse = $request->adresse;
             $user->name = $request->name;
-            $user->matricule = $request->matricule;
+            // $user->matricule = $request->matricule;
             $user->sexe = $request->sexe;
             $user->annee_id = $request->annee_id;
             $user->email = $request->email;
@@ -146,7 +146,7 @@ class AuthController extends Controller
             $user->adresse = $request->get('adresse');
             $user->name = $request->get('name');
             $user->email = $request->get('email');
-            $user->matricule = $request->get('matricule');
+            // $user->matricule = $request->get('matricule');
             $user->phone = $request->get('phone');
             $user->annee_id = $request->get('annee_id');
             $user->role_id = $request->get('role_id'); 
@@ -190,7 +190,7 @@ class AuthController extends Controller
           $user->name = $request->get('name');
           $user->sexe = $request->get('sexe');
           $user->email = $request->get('email');
-          $user->matricule = $request->get('matricule');
+        //   $user->matricule = $request->get('matricule');
           $user->phone = $request->get('phone');
           $user->annee_id = $request->get('annee_id');
           $user->role_id = $request->get('role_id'); 
@@ -210,7 +210,7 @@ class AuthController extends Controller
         $user->email = $request->email;
         $user->phone = $request->phone;
         $user->sexe = $request->sexe;
-        $user->matricule = $request->matricule;
+        // $user->matricule = $request->matricule;
         $user->annee_id = $request->annee_id;
         $user->actived = 0;
         $user->role_id = $request->role_id;
