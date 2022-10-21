@@ -67,7 +67,7 @@ class AuthApiController extends Controller
 
             $users = User::find(Auth::id());
             if($users->role_id == $credential['UserRole']){
-                User::where('id', Auth::user()->id)->update(['last_seen' => Carbon::now()]);
+                // User::where('id', Auth::user()->id)->update(['last_seen' => Carbon::now()]);
                 User::where('id', Auth::user()->id)->update(['is_online' => 1]);
                 return $this->respondWithToken($token);
             } else{
@@ -90,7 +90,7 @@ class AuthApiController extends Controller
             
             $users = User::find(Auth::id());
             if($users->role_id == $credential['UserRole']){
-                User::where('id', Auth::user()->id)->update(['last_seen' => Carbon::now()]);
+                // User::where('id', Auth::user()->id)->update(['last_seen' => Carbon::now()]);
                 User::where('id', Auth::user()->id)->update(['is_online' => 1]);
                 return $this->respondWithToken($token);
             } else{
