@@ -40,7 +40,7 @@ class AuthApiController extends Controller
 
     public function online(Request $request)
     {
-        $users = User::where('is_online',1)->get();
+        $users = User::all();
         // foreach ($users as $user) {
         //     if (Cache::has('user-is-online-' . $user->id))
         //         return ($user ." is online. Last seen: " . Carbon::parse($user->last_seen)->diffForHumans());
@@ -58,7 +58,7 @@ class AuthApiController extends Controller
         $credential = request(['UserRole']);
         if($credentials['email'] !=null){
 
-            if (! $token = auth()->attempt($credentials)) {
+            if (!$token = auth()->attempt($credentials)) {
                 return response()->json([
                     'success' => false,
                     'message' => "L'email ou le mot de passe est invalide.",
@@ -68,7 +68,7 @@ class AuthApiController extends Controller
             $users = User::find(Auth::id());
             if($users->role_id == $credential['UserRole']){
                 // User::where('id', Auth::user()->id)->update(['last_seen' => Carbon::now()]);
-                User::where('id', Auth::user()->id)->update(['is_online' => 1]);
+               // User::where('id', Auth::user()->id)->update(['is_online' => 1]);
                 return $this->respondWithToken($token);
             } else{
                 return response()->json([
