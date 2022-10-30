@@ -52,7 +52,7 @@ Route::group([ 'prefix' => 'auth'], function () {
     Route::post('logout', [AuthApiController::class, 'logout']);
     Route::post('refresh', [AuthApiController::class, 'refresh']);
     Route::post('me', [AuthApiController::class, 'me']);
-    Route::get('user-online', [AuthApiController::class, 'online']);
+     Route::get('user-online', [AuthApiController::class, 'online']);
     Route::get('profile_user', [AuthApiController::class, 'getAuthenticatedUser']);
     Route::get('user-profile', [AuthApiController::class, 'userProfile']);
     Route::post('user-logout', [AuthApiController::class, 'logout']);

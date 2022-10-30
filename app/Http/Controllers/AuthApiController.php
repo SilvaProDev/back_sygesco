@@ -38,7 +38,7 @@ class AuthApiController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
 
-    public function online(Request $request)
+    public function online()
     {
         $users = User::all();
         // foreach ($users as $user) {
